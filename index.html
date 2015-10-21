@@ -1,41 +1,53 @@
 <!DOCTYPE html>
-
-<html lang="es">
+<!--[if IE 8]> <html class="no-js ie8" lang="es"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="es"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="es"><!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Portafolio Web | Uriel Cortés</title>
+		<!--[if lt IE 9]>
+			<script src=""http://html5shiv.googlecode.com/svn/trunk/html5.js"">
+			</script>
+		<![endif]-->
+		<!--[if !IE]><!-->
+			<script>
+				if (/*@cc_on!@*/false && document.documentMode === 10) {
+					document.documentElement.className+=' ie10';
+				}
+			</script>
+		<!--[endif]-->
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 
 	<body>
-		<button id="menu-btn" class="hamburger-icon" onclick="showNavigationMenu();"><span>Menu</span></button>
+		<!-- this button is for small devices -->
+		<button id="toggle-menu-button" class="hamburger-icon">
+			<span>Menu</span>
+		</button>
 
-		<nav id="main-menu" class="main-nav hide" role="navigation">
-			<ul class="nav-container">
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="portfolio.html">Portafolio</a></li>
-				<li><a href="about.html">Sobre mí</a></li>
-				<li><a href="contact.html">Contacto</a></li>
+		<nav id="menu-navigation" class="hide" role="navigation">
+			<ul class="menu-links">
+				<a href="index.html"><li>Trabajos</li></a>
+				<a href="about.html"><li>Sobre mí</li></a>
+				<a href="contact.html"><li>Contacto</li></a>
 			</ul>
 		</nav>
 
-		<header class="master-head" role="banner">
-			<div class="logo"><img src="img/creator_photo.jpg" alt="Uriel Cortés"></div>
-			<p class="presentation">
-				Hola, soy Uriel Cortés, y te invito a conocer mi trabajo
-			</p>
-			<div class="underline-box"><a href="portfolio.html">Explorar portafolio</a></div>
-		</header>
-
 		<main class="main-container" role="main">
-			<div class="opacity-effect"></div>
+			<article class="project">
+				<header class="title">
+					<h1>Portafolio Web</h1>
+				</header>
+				<figure class="picture">
+					<img src="" alt="Portafolio Web">
+				</figure>
+				<p class="description">
+					Esta es la descripción de mi proyecto.
+				</p>
+			</article>
 		</main>
-
-		<footer class="main-footer" role="contentinfo">
-			<p>&copy; Se libre y comparte ;)</p>
-		</footer>
 
 		<script src="scripts/main.js"></script>
 	</body>
