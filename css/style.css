@@ -1,3 +1,162 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+* {
+  margin: 0;
+  padding: 0;
+}
 
+html, body {
+  background-color: #FFFFFF;
+  color: #2A2A2F;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+small {
+  font-size: 0.618em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.115em;
+}
+
+h2 {
+  font-size: 1.618em;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1.804em;
+}
+
+h1, h2, h3 {
+  color: #BA9A67;
+  line-height: 1.917em;
+}
+
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+
+.hamburger-icon {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 0 rgba(42, 42, 47, 0.3);
+  color: #BA9A67;
+}
+.hamburger-icon:before {
+  content: '≡';
+}
+
+.close-icon {
+  background-color: transparent;
+  color: #FFFFFF;
+}
+.close-icon:before {
+  content: 'x';
+}
+
+.hamburger-icon, .close-icon {
+  border: none;
+  font-size: 1.804em;
+  height: 1.618em;
+  position: fixed;
+  right: 0.618em;
+  top: 0.618em;
+  width: 1.618em;
+  z-index: 15;
+}
+.hamburger-icon:before, .close-icon:before {
+  display: inline-block;
+  width: 100%;
+}
+.hamburger-icon span, .close-icon span {
+  display: inline-block;
+  height: 0;
+  overflow: hidden;
+  text-indent: -100%;
+  white-space: nowrap;
+  width: 0;
+}
+
+#menu-navigation {
+  background-color: #2A2A2F;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+#menu-navigation .menu-links {
+  margin: 5.412em 1.618em;
+}
+#menu-navigation .menu-links li {
+  margin: 1.618em 0;
+}
+#menu-navigation .menu-links a {
+  color: #BA9A67;
+  font-size: 1.804em;
+  font-weight: 700;
+}
+#menu-navigation .page-languages {
+  border-top: 1px solid #BA9A67;
+  margin: 0 1.618em;
+  padding-top: 0.309em;
+  text-align: center;
+  width: 70px;
+}
+#menu-navigation .page-languages li {
+  display: inline-block;
+}
+#menu-navigation .page-languages span {
+  margin: 0 0.618em;
+}
+#menu-navigation .page-languages a, #menu-navigation .page-languages span {
+  color: #FFFFFF;
+  line-height: 1.115em;
+}
+#menu-navigation .menu-links, #menu-navigation .page-languages {
+  list-style-type: none;
+}
+
+.hide {
+  display: none;
+}
+
+.main-container {
+  padding-top: 5.412em;
+  width: 100%;
+}
+
+.project-container {
+  margin: 0 1.115em 5.412em;
+}
+.project-container .project {
+  width: 100%;
+}
+.project-container .title {
+  border-bottom: 2px solid #BA9A67;
+  margin-bottom: 1em;
+}
+.project-container .picture img {
+  height: 100%;
+  width: auto;
+}
+.project-container .picture, .project-container video {
+  height: 180px;
+  margin: 1em 0;
+  width: 100%;
+}
+.project-container .project-information {
+  margin: 1em 0;
+}
+.project-container .project-information small {
+  color: #BA9A67;
+}
 
 /*# sourceMappingURL=style.css.map */

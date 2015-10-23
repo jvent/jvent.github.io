@@ -1,0 +1,179 @@
+// Let's go to import 'Raleway' font for our project
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
+// Our color palette is white (primary), gold (secondary), black (text)
+$primaryColor: #FFFFFF;
+$secondaryColor: #BA9A67;
+$textColor: #2A2A2F;
+// Our Modular Scale for typography and padding
+$smallSize: 0.618em;
+$normalSize: 1em;
+$mediumSize: 1.115em;
+$largeSize: 1.618em;
+$ultraLargeSize: 1.804em;
+$skySize: 1.917em;
+
+// Let's go to create a Sass Mixin for large devices media query (Mobile First)
+@mixin forLargeScreens($mediaWidth) {
+	@media (min-width: $mediaWidth/16+em) { @content; }
+}
+
+// And now, let's go to style our project
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	background-color: $primaryColor;
+	color: $textColor;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	height: 100%;
+	width: 100%;
+}
+
+small {
+	font-size: $smallSize;
+	text-transform: uppercase;
+}
+
+h3 { font-size: $mediumSize; }
+
+h2 {
+	font-size: $largeSize;
+	font-weight: 500;
+}
+
+h1 { font-size: $ultraLargeSize; }
+
+h1, h2, h3 {
+	color: $secondaryColor;
+	line-height: $skySize;
+}
+
+a {
+	text-decoration: none;
+
+	&:focus { outline: none; }
+}
+
+.hamburger-icon {
+	background-color: $primaryColor;
+	border-radius: 50%;
+	box-shadow: 0 0 2px 0 rgba($textColor, .3);
+	color: $secondaryColor;
+
+	&:before { content: '≡'; }
+}
+
+.close-icon {
+	background-color: transparent;
+	color: $primaryColor;
+
+	&:before { content: 'x'; }
+}
+
+.hamburger-icon, .close-icon {
+	border: none;
+	font-size: $ultraLargeSize;
+	height: $largeSize;
+	position: fixed;
+	right: $smallSize;
+	top: $smallSize;
+	width: $largeSize;
+	z-index: 15;
+
+	&:before {
+		display: inline-block;
+		width: 100%;
+	}
+
+	span {
+		display: inline-block;
+		height: 0;
+		overflow: hidden;
+		text-indent: -100%;
+		white-space: nowrap;
+		width: 0;
+	}
+}
+
+#menu-navigation {
+	background-color: $textColor;
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+
+	.menu-links {
+		margin: $ultraLargeSize*3 $largeSize;
+
+		li { margin: $largeSize 0; }
+
+		a {
+			color: $secondaryColor;
+			font-size: $ultraLargeSize;
+			font-weight: 700;
+		}
+	}
+
+	.page-languages {
+		border-top: 1px solid $secondaryColor;
+		margin: 0 $largeSize;
+		padding-top: $smallSize/2;
+		text-align: center;
+		width: 70px;
+
+		li { display: inline-block; }
+
+		span { margin: 0 $smallSize; }
+
+		a, span {
+			color: $primaryColor;
+			line-height: $mediumSize;
+		}
+	}
+
+	.menu-links, .page-languages {
+		list-style-type: none;
+	}
+}
+
+.hide { display: none; }
+
+.main-container {
+	padding-top: $ultraLargeSize*3;
+	width: 100%;
+}
+
+.project-container {
+	margin: 0 $mediumSize $ultraLargeSize*3;
+
+	.project { width: 100%; }
+
+	.title {
+		border-bottom: 2px solid $secondaryColor;
+		margin-bottom: $normalSize;
+	}
+
+	.picture {
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	.picture, video {
+		height: 180px;
+		margin: $normalSize 0;
+		width: 100%;
+	}
+
+	.project-information {
+		margin: $normalSize 0;
+
+		small { color: $secondaryColor; }
+
+	}
+}

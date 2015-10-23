@@ -23,32 +23,56 @@
 
 	<body>
 		<!-- this button is for small devices -->
-		<button id="toggle-menu-button" class="hamburger-icon">
+		<button id="toggle-menu-button" class="hamburger-icon" onclick="showMainNavigation();">
 			<span>Menu</span>
 		</button>
 
 		<nav id="menu-navigation" class="hide" role="navigation">
 			<ul class="menu-links">
-				<a href="index.html"><li>Trabajos</li></a>
-				<a href="about.html"><li>Sobre mí</li></a>
-				<a href="contact.html"><li>Contacto</li></a>
+				<li><a href="index.html">Trabajos</a></li>
+				<li><a href="about.html">Sobre mí</a></li>
+				<li><a href="contact.html">Contacto</a></li>
+			</ul>
+			<ul class="page-languages">
+				<li><a href="en/index.html"><small>en</small></a></li>
+				<li><span>/</span></li>
+				<li><a href="fr/index.html"><small>fr</small></a></li>
 			</ul>
 		</nav>
 
 		<main class="main-container" role="main">
-			<article class="project">
-				<header class="title">
-					<h1>Portafolio Web</h1>
-				</header>
-				<figure class="picture">
-					<img src="" alt="Portafolio Web">
-				</figure>
-				<p class="description">
-					Esta es la descripción de mi proyecto.
-				</p>
-			</article>
+			<section class="project-container">
+				<article class="project">
+					<header class="title">
+						<h1>Portafolio Web</h1>
+					</header>
+					<figure class="picture">
+						<img src="" alt="Portafolio Web">
+					</figure>
+					<section class="project-information">
+						<section>
+							<small>Tipo de trabajo</small>
+							<p>Sitio Web</p>
+						</section>
+						<section>
+							<small>Industria</small>
+							<p>Diseño y Desarrollo web</p>
+						</section>
+						<section>
+							<small>Fecha</small>
+							<p>Octubre 2015</p>
+						</section>
+					</section>
+					<section class="description">
+						<h2>Sobre el proyecto</h2>
+						<p>
+							Esta es la descripción de mi proyecto.
+						</p>
+					</section>
+				</article>
+			</section>
 		</main>
 
-		<script src="scripts/main.js"></script>
+		<script type="text/javascript" src="scripts/main.js"></script>
 	</body>
 </html>
