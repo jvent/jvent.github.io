@@ -15,12 +15,13 @@ html, body {
 }
 
 small {
+  color: #BA9A67;
   font-size: 0.618em;
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: 1.115em;
+  font-size: 1.292em;
 }
 
 h2 {
@@ -29,18 +30,18 @@ h2 {
 }
 
 h1 {
-  font-size: 1.804em;
+  font-size: 2.09em;
 }
 
 h1, h2, h3 {
   color: #BA9A67;
-  line-height: 1.917em;
+  line-height: 2.09em;
 }
 
 a {
   text-decoration: none;
 }
-a:focus {
+a:focus, a:active {
   outline: none;
 }
 
@@ -64,7 +65,7 @@ a:focus {
 
 .hamburger-icon, .close-icon {
   border: none;
-  font-size: 1.804em;
+  font-size: 2.09em;
   height: 1.618em;
   position: fixed;
   right: 0.618em;
@@ -93,14 +94,14 @@ a:focus {
   z-index: 10;
 }
 #menu-navigation .menu-links {
-  margin: 5.412em 1.618em;
+  margin: 6.27em 1.618em;
 }
 #menu-navigation .menu-links li {
   margin: 1.618em 0;
 }
 #menu-navigation .menu-links a {
   color: #BA9A67;
-  font-size: 1.804em;
+  font-size: 2.09em;
   font-weight: 700;
 }
 #menu-navigation .page-languages {
@@ -116,9 +117,9 @@ a:focus {
 #menu-navigation .page-languages span {
   margin: 0 0.618em;
 }
-#menu-navigation .page-languages a, #menu-navigation .page-languages span {
+#menu-navigation .page-languages a, #menu-navigation .page-languages span, #menu-navigation .page-languages small {
   color: #FFFFFF;
-  line-height: 1.115em;
+  line-height: 1.292em;
 }
 #menu-navigation .menu-links, #menu-navigation .page-languages {
   list-style-type: none;
@@ -129,34 +130,64 @@ a:focus {
 }
 
 .main-container {
-  padding-top: 5.412em;
+  padding-top: 6.27em;
   width: 100%;
 }
 
-.project-container {
-  margin: 0 1.115em 5.412em;
+.container {
+  margin: 0 1.292em 6.27em;
 }
-.project-container .project {
+
+.project {
   width: 100%;
 }
-.project-container .title {
+
+.title {
   border-bottom: 2px solid #BA9A67;
   margin-bottom: 1em;
 }
-.project-container .picture img {
+
+.picture img {
   height: 100%;
   width: auto;
 }
-.project-container .picture, .project-container video {
+
+.picture, video {
   height: 180px;
   margin: 1em 0;
   width: 100%;
 }
-.project-container .project-information {
+
+.project-information {
   margin: 1em 0;
 }
-.project-container .project-information small {
-  color: #BA9A67;
+
+.form-group, input, label, textarea {
+  border: none;
+  display: block;
+  width: 100%;
+}
+
+.form-group {
+  padding-bottom: 1em;
+}
+.form-group input {
+  border-bottom: 1px solid #BA9A67;
+}
+.form-group textarea {
+  margin-top: 0.618em;
+}
+
+input, .submit-form-button {
+  line-height: 2.618em;
+}
+
+.submit-form-button {
+  background-color: #BA9A67;
+  color: #FFFFFF;
+  font-weight: 500;
+  margin: 1.292em auto 0;
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

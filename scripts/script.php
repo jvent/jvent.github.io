@@ -1,3 +1,12 @@
+<?php
+
+	$name = $_REQUEST['name'];
+	$email = $_REQUEST['e-mail'];
+	$phone = $_REQUEST['phone'];
+	$message = $_REQUEST['message'];
+
+?>
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js ie8" lang="es"> <![endif]-->
 <!--[if IE 9]> <html class="no-js ie9" lang="es"> <![endif]-->
@@ -18,7 +27,7 @@
 				}
 			</script>
 		<!--[endif]-->
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="../css/style.css">
 	</head>
 
 	<body>
@@ -29,9 +38,9 @@
 
 		<nav id="menu-navigation" class="hide" role="navigation">
 			<ul class="menu-links">
-				<li><a href="index.html">Trabajos</a></li>
-				<li><a href="about.html">Sobre mí</a></li>
-				<li><a href="contact.html">Contacto</a></li>
+				<li><a href="../index.html">Trabajos</a></li>
+				<li><a href="../about.html">Sobre mí</a></li>
+				<li><a href="../contact.html">Contacto</a></li>
 			</ul>
 			<ul class="page-languages">
 				<li><a href="en/index.html"><small>en</small></a></li>
@@ -41,38 +50,33 @@
 		</nav>
 
 		<main class="main-container" role="main">
-			<section class="container">
-				<article class="project">
-					<header class="title">
-						<h1>Portafolio Web</h1>
-					</header>
-					<figure class="picture">
-						<img src="" alt="Portafolio Web">
-					</figure>
-					<section class="project-information">
-						<section>
-							<small>Tipo de trabajo</small>
-							<p>Sitio Web</p>
-						</section>
-						<section>
-							<small>Industria</small>
-							<p>Diseño y Desarrollo web</p>
-						</section>
-						<section>
-							<small>Fecha</small>
-							<p>Octubre 2015</p>
-						</section>
-					</section>
-					<section class="description">
-						<h2>Sobre el proyecto</h2>
-						<p>
-							Esta es la descripción de mi proyecto.
-						</p>
-					</section>
-				</article>
+			<section class="container" role="contentinfo">
+				<header class="title">
+					<h1>Datos</h1>
+				</header>
+
+				<section class="form-group">
+					<small>Nombre</small>
+					<p><?php echo $name; ?></p>
+				</section>
+
+				<section class="form-group">
+					<small>E-mail</small>
+					<p><?php echo $email; ?></p>
+				</section>
+
+				<section class="form-group">
+					<small>Teléfono</small>
+					<p><?php echo $phone; ?></p>
+				</section>
+
+				<section class="form-group">
+					<small>Mensaje</small>
+					<p><?php echo $message; ?></p>
+				</section>
 			</section>
 		</main>
 
-		<script type="text/javascript" src="scripts/main.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>

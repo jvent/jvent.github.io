@@ -8,10 +8,10 @@ $textColor: #2A2A2F;
 // Our Modular Scale for typography and padding
 $smallSize: 0.618em;
 $normalSize: 1em;
-$mediumSize: 1.115em;
+$mediumSize: 1.292em;
 $largeSize: 1.618em;
-$ultraLargeSize: 1.804em;
-$skySize: 1.917em;
+$ultraLargeSize: 2.09em;
+$skySize: 2.618em;
 
 // Let's go to create a Sass Mixin for large devices media query (Mobile First)
 @mixin forLargeScreens($mediaWidth) {
@@ -34,6 +34,7 @@ html, body {
 }
 
 small {
+	color: $secondaryColor;
 	font-size: $smallSize;
 	text-transform: uppercase;
 }
@@ -49,13 +50,13 @@ h1 { font-size: $ultraLargeSize; }
 
 h1, h2, h3 {
 	color: $secondaryColor;
-	line-height: $skySize;
+	line-height: $ultraLargeSize;
 }
 
 a {
 	text-decoration: none;
 
-	&:focus { outline: none; }
+	&:focus, &:active { outline: none; }
 }
 
 .hamburger-icon {
@@ -129,7 +130,7 @@ a {
 
 		span { margin: 0 $smallSize; }
 
-		a, span {
+		a, span, small {
 			color: $primaryColor;
 			line-height: $mediumSize;
 		}
@@ -147,33 +148,54 @@ a {
 	width: 100%;
 }
 
-.project-container {
+.container {
 	margin: 0 $mediumSize $ultraLargeSize*3;
+}
 
-	.project { width: 100%; }
+.project { width: 100%; }
 
-	.title {
-		border-bottom: 2px solid $secondaryColor;
-		margin-bottom: $normalSize;
+.title {
+	border-bottom: 2px solid $secondaryColor;
+	margin-bottom: $normalSize;
+}
+
+.picture {
+	img {
+		height: 100%;
+		width: auto;
+	}
+}
+
+.picture, video {
+	height: 180px;
+	margin: $normalSize 0;
+	width: 100%;
+}
+
+.project-information { margin: $normalSize 0; }
+
+.form-group, input, label, textarea {
+	border: none;
+	display: block;
+	width: 100%;
+}
+
+.form-group {
+	padding-bottom: $normalSize;
+
+	input {
+		border-bottom: 1px solid $secondaryColor;
 	}
 
-	.picture {
-		img {
-			height: 100%;
-			width: auto;
-		}
-	}
+	textarea { margin-top: $smallSize; }
+}
 
-	.picture, video {
-		height: 180px;
-		margin: $normalSize 0;
-		width: 100%;
-	}
+input, .submit-form-button { line-height: $skySize; }
 
-	.project-information {
-		margin: $normalSize 0;
-
-		small { color: $secondaryColor; }
-
-	}
+.submit-form-button {
+	background-color: $secondaryColor;
+	color: $primaryColor;
+	font-weight: 500;
+	margin: $mediumSize auto 0;
+	width: 100px;
 }
